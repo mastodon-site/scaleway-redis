@@ -25,12 +25,6 @@ variable "private_network_id" {
   type        = string
 }
 
-variable "redis_allowed_ips" {
-  description = "List of IP CIDRs that are allowed to connect to the Redis cluster"
-  type        = list(string)
-  default     = []
-}
-
 variable "redis_cluster_name" {
   description = "Name of the Redis cluster to create"
   type        = string
