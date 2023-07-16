@@ -33,7 +33,7 @@ variable "redis_cluster_name" {
 variable "redis_cluster_size" {
   description = "Number of nodes for the Redis cluster (1 or 3+)"
   type        = string
-  default     = "3"
+  default     = "1"
 }
 
 variable "redis_max_connections" {
