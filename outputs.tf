@@ -8,7 +8,7 @@ output "redis_password" {
 }
 
 output "redis_private_network" {
-  value = scaleway_redis_cluster.main.private_network[*]
+  value = trimsuffix(element(element(scaleway_redis_cluster.main.private_network[*].service_ips, 0), 0), "/22")
 }
 
 output "redis_username" {
